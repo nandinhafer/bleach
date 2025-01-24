@@ -11,7 +11,7 @@ p {
 }
 
 /* Box shadow */
-box {
+.box {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
@@ -59,6 +59,7 @@ button:focus-visible {
 
 .navbar .logo img {
   height: 50px;
+  max-width: 100%;
 }
 
 .navbar .nav-links {
@@ -82,6 +83,16 @@ button:focus-visible {
   color: white;
 }
 
+/* Adicionando estilo para botão hambúrguer */
+.navbar .menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
 /* Responsividade para telas menores */
 @media (max-width: 768px) {
   .navbar {
@@ -90,8 +101,17 @@ button:focus-visible {
   }
 
   .navbar .nav-links {
+    display: none;
     flex-direction: column;
     width: 100%;
+  }
+
+  .navbar.active .nav-links {
+    display: flex;
+  }
+
+  .navbar .menu-toggle {
+    display: block;
   }
 
   .navbar .nav-links a {
@@ -175,3 +195,20 @@ button:focus-visible {
     margin: 10px 0;
   }
 }
+
+/* Responsividade para telas muito pequenas */
+@media (max-width: 480px) {
+  .navbar {
+    padding: 5px 10px;
+  }
+
+  .footer {
+    padding: 20px 10px;
+  }
+
+  .footer .footer-about, .footer .footer-contact {
+    width: 100%;
+    text-align: center;
+  }
+}
+
