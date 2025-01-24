@@ -1,3 +1,4 @@
+/* Estilo geral */
 body {
   background-color: #4f4c49;
   margin: 0;
@@ -5,17 +6,11 @@ body {
   font-family: Arial, sans-serif;
 }
 
-/* Estilos para os parágrafos */
 p {
   color: #ece4db;
 }
 
-/* Box shadow */
-box {
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-}
-
-/* Estilo para os botões */
+/* Estilo de botões */
 button {
   background-color: #ffffff34;
   border: 1px solid rgb(209, 213, 219);
@@ -23,18 +18,10 @@ button {
   color: #111827;
   font-size: 0.875rem;
   font-weight: 600;
-  line-height: 1.25rem;
   padding: 0.75rem 1rem;
   text-align: center;
-  -webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
   cursor: pointer;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-user-select: none;
-  -ms-touch-action: manipulation;
-  touch-action: manipulation;
 }
 
 button:hover {
@@ -46,21 +33,13 @@ button:focus {
   outline-offset: 2px;
 }
 
-button:focus-visible {
-  -webkit-box-shadow: none;
-  box-shadow: none;
-}
-
-/* Barra de navegação */
+/* Barra de Navegação */
 .navbar {
   background-color: #333;
-  overflow: hidden;
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
   padding: 10px 20px;
-  width: 100%;
-  box-sizing: border-box;
 }
 
 .navbar .logo img {
@@ -69,13 +48,13 @@ button:focus-visible {
 
 .navbar .nav-links {
   display: flex;
+  gap: 10px;
 }
 
 .navbar .nav-links a {
   color: white;
-  text-align: center;
-  padding: 14px 20px;
   text-decoration: none;
+  padding: 10px 15px;
 }
 
 .navbar .nav-links a:hover {
@@ -83,38 +62,7 @@ button:focus-visible {
   color: black;
 }
 
-.navbar .nav-links a.active {
-  background-color: #04AA6D;
-  color: white;
-}
-
-/* Responsividade para telas pequenas */
-@media (max-width: 768px) {
-  .navbar {
-      flex-direction: column;
-      align-items: flex-start;
-  }
-
-  .navbar .nav-links {
-      flex-direction: column;
-      width: 100%;
-  }
-
-  .navbar .nav-links a {
-      text-align: left;
-      padding: 10px 20px;
-      width: 100%;
-  }
-
-  /* Estilo dos botões para telas pequenas */
-  button {
-      font-size: 1rem;
-      width: 100%;
-      margin: 10px 0;
-  }
-}
-
-/* Footer */
+/* Rodapé */
 .footer {
   background-color: #222;
   color: #fff;
@@ -124,8 +72,9 @@ button:focus-visible {
 
 .footer .container {
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -134,15 +83,9 @@ button:focus-visible {
   margin-bottom: 15px;
 }
 
-.footer p, .footer ul, .footer a {
-  margin: 0;
-  padding: 0;
-  line-height: 1.8;
-  color: #bbb;
-}
-
 .footer ul {
   list-style: none;
+  padding: 0;
 }
 
 .footer a {
@@ -162,23 +105,32 @@ button:focus-visible {
   font-size: 14px;
 }
 
-.footer .footer-about, .footer .footer-contact {
-  flex: 1 1 300px;
-  margin: 20px;
-}
-
-.footer .footer-about p, .footer .footer-contact p {
-  font-size: 14px;
-}
-
-/* Responsividade para o footer em telas menores */
+/* Responsividade */
 @media (max-width: 768px) {
-  .footer .container {
-      flex-direction: column;
-      align-items: center;
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
   }
 
-  .footer .footer-about, .footer .footer-contact {
-      margin: 10px 0;
+  .navbar .nav-links {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .navbar .nav-links a {
+    text-align: left;
+    padding: 10px 20px;
+    width: 100%;
+  }
+
+  button {
+    font-size: 1rem;
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .footer .container {
+    flex-direction: column;
+    align-items: center;
   }
 }
