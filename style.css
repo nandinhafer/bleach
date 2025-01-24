@@ -2,12 +2,56 @@ body {
   background-color: #4f4c49;
   margin: 0;
   padding: 0;
+  font-family: Arial, sans-serif;
 }
 
+/* Estilos para os parágrafos */
 p {
   color: #ece4db;
 }
 
+/* Box shadow */
+box {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+/* Estilo para os botões */
+button {
+  background-color: #ffffff34;
+  border: 1px solid rgb(209, 213, 219);
+  border-radius: 0.5rem;
+  color: #111827;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.25rem;
+  padding: 0.75rem 1rem;
+  text-align: center;
+  -webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-user-select: none;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+}
+
+button:hover {
+  background-color: #f9fafb5d;
+}
+
+button:focus {
+  outline: 2px solid rgba(0, 0, 0, 0.1);
+  outline-offset: 2px;
+}
+
+button:focus-visible {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+/* Barra de navegação */
 .navbar {
   background-color: #333;
   overflow: hidden;
@@ -44,7 +88,7 @@ p {
   color: white;
 }
 
-/* Responsividade */
+/* Responsividade para telas pequenas */
 @media (max-width: 768px) {
   .navbar {
       flex-direction: column;
@@ -61,6 +105,13 @@ p {
       padding: 10px 20px;
       width: 100%;
   }
+
+  /* Estilo dos botões para telas pequenas */
+  button {
+      font-size: 1rem;
+      width: 100%;
+      margin: 10px 0;
+  }
 }
 
 /* Footer */
@@ -68,6 +119,7 @@ p {
   background-color: #222;
   color: #fff;
   padding: 40px 20px;
+  text-align: center;
 }
 
 .footer .container {
@@ -104,14 +156,13 @@ p {
 }
 
 .footer-bottom {
-  text-align: center;
   margin-top: 20px;
   border-top: 1px solid #444;
   padding-top: 10px;
   font-size: 14px;
 }
 
-.footer .footer-about, .footer .footer-links, .footer .footer-contact {
+.footer .footer-about, .footer .footer-contact {
   flex: 1 1 300px;
   margin: 20px;
 }
@@ -120,13 +171,14 @@ p {
   font-size: 14px;
 }
 
+/* Responsividade para o footer em telas menores */
 @media (max-width: 768px) {
   .footer .container {
       flex-direction: column;
       align-items: center;
   }
 
-  .footer .footer-about, .footer .footer-links, .footer .footer-contact {
+  .footer .footer-about, .footer .footer-contact {
       margin: 10px 0;
   }
 }
