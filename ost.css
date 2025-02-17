@@ -1,3 +1,4 @@
+/* Estilo geral */
 body {
   background-color: #4f4c49;
   margin: 0;
@@ -5,9 +6,10 @@ body {
   font-family: Arial, sans-serif;
 }
 
-/* Estilo geral de texto */
+/* Estilos para os parágrafos */
 p {
   color: #ece4db;
+  font-size: 1.2rem; /* Ajuste para legibilidade */
 }
 
 /* Box shadow */
@@ -21,15 +23,15 @@ button {
   border: 1px solid rgb(209, 213, 219);
   border-radius: 0.5rem;
   color: #111827;
-  font-size: 1rem; /* Tamanho de fonte normal para desktop */
+  font-size: 1rem; /* Ajustado para que os botões fiquem com tamanho mais adequado */
   font-weight: 600;
-  line-height: 1.25rem;
-  padding: 0.75rem 1rem;
+  padding: 1rem;
   text-align: center;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
   cursor: pointer;
-  user-select: none;
-  touch-action: manipulation;
+  width: 100%; /* Para tornar os botões responsivos */
+  margin: 10px 0;
+  transition: background-color 0.3s;
 }
 
 button:hover {
@@ -41,10 +43,6 @@ button:focus {
   outline-offset: 2px;
 }
 
-button:focus-visible {
-  box-shadow: none;
-}
-
 /* Barra de navegação */
 .navbar {
   background-color: #333;
@@ -52,13 +50,11 @@ button:focus-visible {
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
-  width: 100%;
-  box-sizing: border-box;
 }
 
 .navbar .logo img {
   height: 50px;
-  object-fit: contain;
+  object-fit: contain; /* Para não distorcer a logo */
 }
 
 .navbar .nav-links {
@@ -68,8 +64,8 @@ button:focus-visible {
 
 .navbar .nav-links a {
   color: white;
-  padding: 10px 15px;
   text-decoration: none;
+  padding: 10px 15px;
 }
 
 .navbar .nav-links a:hover {
@@ -77,8 +73,9 @@ button:focus-visible {
   color: black;
 }
 
-/* Responsividade para telas pequenas */
+/* Responsividade */
 @media (max-width: 768px) {
+  /* Navbar em telas menores */
   .navbar {
     flex-direction: column;
     align-items: flex-start;
@@ -87,7 +84,6 @@ button:focus-visible {
   .navbar .nav-links {
     flex-direction: column;
     width: 100%;
-    margin-top: 10px;
   }
 
   .navbar .nav-links a {
@@ -96,19 +92,14 @@ button:focus-visible {
     width: 100%;
   }
 
+  /* Ajustando botões e fontes */
   button {
-    font-size: 0.9rem; /* Tamanho menor para botões em telas pequenas */
-    width: 100%;
-    margin: 10px 0;
-  }
-
-  .footer .container {
-    flex-direction: column;
-    align-items: center;
+    font-size: 1.2rem; /* Aumentar um pouco o tamanho dos botões em telas pequenas */
+    padding: 1rem;
   }
 }
 
-/* Footer */
+/* Ajustes no footer */
 .footer {
   background-color: #222;
   color: #fff;
@@ -118,8 +109,9 @@ button:focus-visible {
 
 .footer .container {
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -179,6 +171,7 @@ button:focus-visible {
 
 /* Responsividade para telas muito pequenas */
 @media (max-width: 480px) {
+  /* Ajustes finais para dispositivos pequenos */
   .navbar {
     padding: 5px 10px;
   }
@@ -192,9 +185,12 @@ button:focus-visible {
     text-align: center;
   }
 
-  /* Ajustando ainda mais o tamanho dos botões em telas pequenas */
+  /* Fontes menores nos botões e fontes */
   button {
-    font-size: 0.85rem; /* Fontes menores para telas muito pequenas */
-    padding: 0.6rem 1rem;
+    font-size: 1rem; /* Fontes menores em telas bem pequenas */
+  }
+
+  p {
+    font-size: 1rem;
   }
 }
