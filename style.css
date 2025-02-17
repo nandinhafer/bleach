@@ -8,7 +8,7 @@ body {
 
 p {
   color: #ece4db;
-  font-size: 1.5rem; /* Ajuste para que o texto seja responsivo */
+  font-size: 1.5rem; /* Ajuste para tamanho de texto maior, mas não tão grande */
   line-height: 1.6;
 }
 
@@ -129,7 +129,11 @@ button:focus {
   /* Ajustes no conteúdo */
   img {
     max-width: 100%;
-    height: auto; /* Ajustar imagens para não saírem da tela */
+    height: auto; /* Garantir que as imagens não fiquem esticadas */
+  }
+
+  p {
+    font-size: 1rem; /* Diminuir o tamanho do texto em dispositivos menores */
   }
 
   button {
