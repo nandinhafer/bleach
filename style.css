@@ -8,8 +8,9 @@ body {
 
 p {
   color: #ece4db;
-  font-size: 1.5rem; /* Ajuste para tamanho de texto maior, mas não tão grande */
+  font-size: 1.2rem; /* Ajuste de fonte para maior legibilidade */
   line-height: 1.6;
+  margin: 20px;
 }
 
 /* Estilo de botões */
@@ -18,7 +19,7 @@ button {
   border: 1px solid rgb(209, 213, 219);
   border-radius: 0.5rem;
   color: #111827;
-  font-size: 1rem; /* Ajuste o tamanho do texto */
+  font-size: 0.875rem;
   font-weight: 600;
   padding: 0.75rem 1rem;
   text-align: center;
@@ -46,11 +47,12 @@ button:focus {
 
 .navbar .logo img {
   height: 50px;
+  object-fit: contain; /* Para não distorcer a logo */
 }
 
 .navbar .nav-links {
   display: flex;
-  gap: 10px;
+  gap: 20px;
 }
 
 .navbar .nav-links a {
@@ -62,6 +64,13 @@ button:focus {
 .navbar .nav-links a:hover {
   background-color: #ddd;
   color: black;
+}
+
+/* Imagens Responsivas */
+.responsive {
+  width: 100%;
+  height: auto;
+  max-width: 900px; /* Limita a largura para telas grandes */
 }
 
 /* Rodapé */
@@ -112,7 +121,6 @@ button:focus {
   .navbar {
     flex-direction: column;
     align-items: flex-start;
-    padding: 15px 20px; /* Ajuste no padding */
   }
 
   .navbar .nav-links {
@@ -124,16 +132,6 @@ button:focus {
     text-align: left;
     padding: 10px 20px;
     width: 100%;
-  }
-
-  /* Ajustes no conteúdo */
-  img {
-    max-width: 100%;
-    height: auto; /* Garantir que as imagens não fiquem esticadas */
-  }
-
-  p {
-    font-size: 1rem; /* Diminuir o tamanho do texto em dispositivos menores */
   }
 
   button {
