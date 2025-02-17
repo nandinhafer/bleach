@@ -21,7 +21,7 @@ button {
   border: 1px solid rgb(209, 213, 219);
   border-radius: 0.5rem;
   color: #111827;
-  font-size: 0.875rem;
+  font-size: 1rem; /* Tamanho de fonte normal para desktop */
   font-weight: 600;
   line-height: 1.25rem;
   padding: 0.75rem 1rem;
@@ -97,7 +97,7 @@ button:focus-visible {
   }
 
   button {
-    font-size: 1rem;
+    font-size: 0.9rem; /* Tamanho menor para botões em telas pequenas */
     width: 100%;
     margin: 10px 0;
   }
@@ -190,5 +190,11 @@ button:focus-visible {
   .footer .footer-about, .footer .footer-contact {
     width: 100%;
     text-align: center;
+  }
+
+  /* Ajustando ainda mais o tamanho dos botões em telas pequenas */
+  button {
+    font-size: 0.85rem; /* Fontes menores para telas muito pequenas */
+    padding: 0.6rem 1rem;
   }
 }
