@@ -94,7 +94,7 @@ button:focus {
 
   /* Ajustando botões e fontes */
   button {
-    font-size: 1.2rem; /* Aumentar um pouco o tamanho dos botões em telas pequenas */
+    font-size: 0.4rem; /* Aumentar um pouco o tamanho dos botões em telas pequenas */
     padding: 1rem;
   }
 }
