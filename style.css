@@ -1,3 +1,4 @@
+
 * {
   margin: 0;
   padding: 0;
@@ -71,58 +72,6 @@ p {
   margin: 20px;
 }
 
-/* Estilo de botões */
-button {
-  background-color: #ffffff34;
-  border: 1px solid rgb(209, 213, 219);
-  border-radius: 0.5rem;
-  color: #111827;
-  font-size: 0.875rem;
-  font-weight: 600;
-  padding: 0.75rem 1rem;
-  text-align: center;
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #f9fafb5d;
-}
-
-button:focus {
-  outline: 2px solid rgba(0, 0, 0, 0.1);
-  outline-offset: 2px;
-}
-
-/* Barra de Navegação */
-.navbar {
-  background-color: #333;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
-}
-
-.navbar .logo img {
-  height: 50px;
-  object-fit: contain; /* Para não distorcer a logo */
-}
-
-.navbar .nav-links {
-  display: flex;
-  gap: 20px;
-}
-
-.navbar .nav-links a {
-  color: white;
-  text-decoration: none;
-  padding: 10px 15px;
-}
-
-.navbar .nav-links a:hover {
-  background-color: #ddd;
-  color: black;
-}
 
 /* Imagens Responsivas */
 .responsive {
