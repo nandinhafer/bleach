@@ -164,6 +164,7 @@ p {
   position: relative;
   transition: transform 0.3s, box-shadow 0.3s;
   height: 400px;
+  display: inline-block;
 }
 
 .card:hover {
