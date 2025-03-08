@@ -1,3 +1,61 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #333;
+  padding: 15px;
+  color: white;
+}
+.menu {
+  display: flex;
+  list-style: none;
+}
+.menu li {
+  margin: 0 15px;
+}
+.menu li a {
+  color: white;
+  text-decoration: none;
+}
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background: white;
+  margin: 5px;
+}
+@media (max-width: 768px) {
+  .menu {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      background: #333;
+  }
+  .menu.active {
+      display: flex;
+  }
+  .hamburger {
+      display: flex;
+  }
+}
+
+
+
 /* Estilo geral */
 body {
   background-color: #4f4c49;
