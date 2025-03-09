@@ -65,6 +65,12 @@ body {
   font-family: Arial, sans-serif;
 }
 
+h1{
+  color: #ece4db;
+  text-shadow: 0.1em 0.1em 0.2em black
+}
+
+
 p {
   color: #ece4db;
   font-size: 1.2rem; /* Ajuste de fonte para maior legibilidade */
@@ -154,26 +160,17 @@ p {
 
 
 
-.container {
-  display: flex; /* Organiza os cards lado a lado */
-  flex-wrap: wrap; /* Permite quebrar para a linha de baixo */
-  justify-content: center; /* Centraliza os cards */
-  gap: 20px; /* Espaçamento entre os cards */
-  padding: 20px; /* Espaçamento para não ficar grudado na borda */
-}
-
-.card {
+.card{
   width: 90%;
   max-width: 250px;
-  height: 400px;
   margin: 10px;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s, box-shadow 0.3s;
   position: relative;
+  transition: transform 0.3s, box-shadow 0.3s;
+  height: 450px;
   display: inline-block;
-  text-align: center;
 }
 
 .card:hover {
@@ -183,9 +180,9 @@ p {
 
 .image {
   width: 100%;
-  height: 350px;
-  object-fit: cover; /* Faz a imagem preencher o espaço corretamente */
+  height: auto;
   transition: opacity 0.5s;
+  height: 350px;
 }
 
 .image.hidden {
@@ -196,16 +193,5 @@ p {
 }
 
 .content {
-  padding: 10px;
-}
-
-h2 {
-  margin: 0;
-}
-
-@media (max-width: 768px) {
-  .container {
-    flex-direction: column; /* Empilha os cards em telas menores */
-    align-items: center; /* Centraliza os cards na vertical */
-  }
+  text-align: center;
 }

@@ -1,17 +1,15 @@
 const cards = document.querySelectorAll('.card');
 
 cards.forEach(card => {
-  const images = card.querySelectorAll('.image');
+    let currentImage = 0;
+    const images = card.querySelectorAll('.image');
 
-  card.addEventListener('mouseenter', () => {
-    images[0].classList.add('hidden');
-    images[1].classList.remove('hidden');
-  });
-
-  card.addEventListener('mouseleave', () => {
-    images[0].classList.remove('hidden');
-    images[1].classList.add('hidden');
-  });
+    card.addEventListener('mouseover', () => {
+        currentImage = (currentImage + 1) % images.length;
+        images.forEach((img, index) => {
+            img.classList.toggle('hidden', index !== currentImage);
+        });
+    });
 });
 
 
