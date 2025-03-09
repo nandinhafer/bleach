@@ -154,17 +154,26 @@ p {
 
 
 
-.card{
+.container {
+  display: flex; /* Organiza os cards lado a lado */
+  flex-wrap: wrap; /* Permite quebrar para a linha de baixo */
+  justify-content: center; /* Centraliza os cards */
+  gap: 20px; /* Espaçamento entre os cards */
+  padding: 20px; /* Espaçamento para não ficar grudado na borda */
+}
+
+.card {
   width: 90%;
   max-width: 250px;
+  height: 400px;
   margin: 10px;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  position: relative;
   transition: transform 0.3s, box-shadow 0.3s;
-  height: 400px;
+  position: relative;
   display: inline-block;
+  text-align: center;
 }
 
 .card:hover {
@@ -174,9 +183,9 @@ p {
 
 .image {
   width: 100%;
-  height: auto;
-  transition: opacity 0.5s;
   height: 350px;
+  object-fit: cover; /* Faz a imagem preencher o espaço corretamente */
+  transition: opacity 0.5s;
 }
 
 .image.hidden {
@@ -187,5 +196,16 @@ p {
 }
 
 .content {
-  text-align: center;
+  padding: 10px;
+}
+
+h2 {
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* Empilha os cards em telas menores */
+    align-items: center; /* Centraliza os cards na vertical */
+  }
 }
