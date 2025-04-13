@@ -195,3 +195,7 @@ p {
 .content {
   text-align: center;
 }
+
+.breve {
+  list-style: none;
+}
