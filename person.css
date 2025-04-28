@@ -164,12 +164,13 @@ p {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
+  gap: 10px;
 }
 
 .card {
   text-align: center;
-  width: 200px;
+  flex: 1 1 45%; /* Ocupa cerca de 45% da largura */
+  max-width: 200px;
   border: none;
   background: none;
   cursor: pointer;
@@ -184,6 +185,13 @@ p {
 }
 
 .card h2 {
-  font-size: 1.2rem;
-  margin-top: 10px;
+  font-size: 1.1rem;
+  margin-top: 8px;
+}
+
+/* Opcional: garantir que em telas muito pequenas continue lado a lado */
+@media (max-width: 400px) {
+  .card {
+      flex: 1 1 48%;
+  }
 }
