@@ -161,36 +161,32 @@ p {
 
 
 .container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: nowrap; /* Não quebra para baixo */
+  gap: 10px;
   padding: 10px;
-  justify-items: center;
 }
 
 .card {
+  width: 150px; /* Menorzinho para caber no celular */
   text-align: center;
-  border: none;
-  background: none;
-  cursor: pointer;
-  text-decoration: none;
-  color: inherit;
-  width: 100%;
-  max-width: 200px;
 }
 
 .card img {
   width: 100%;
   height: auto;
-  border-radius: 10px;
-  transition: transform 0.3s;
-}
-
-.card img:hover {
-  transform: scale(1.05); /* Pequeno zoom ao passar o mouse */
+  border-radius: 8px;
 }
 
 .card h2 {
-  font-size: 1.1rem;
-  margin-top: 8px;
+  font-size: 1rem;
+  margin-top: 5px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
