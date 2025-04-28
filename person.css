@@ -160,32 +160,85 @@ p {
 
 
 
+/* Animação de entrada */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Animação de flutuação leve */
+@keyframes float {
+  0%, 100% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-5px);
+  }
+}
+
+/* Estilos gerais */
+body {
+  
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
 .container {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: flex-start;
-  flex-wrap: nowrap; /* Não quebra para baixo */
-  gap: 10px;
-  padding: 10px;
+  flex-wrap: nowrap;
+  gap: 20px;
+  padding: 20px;
+  animation: fadeIn 1s ease-in;
 }
 
 .card {
-  width: 150px; /* Menorzinho para caber no celular */
+  width: 150px;
   text-align: center;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  animation: float 4s ease-in-out infinite;
 }
 
 .card img {
   width: 100%;
   height: auto;
-  border-radius: 8px;
+  border-radius: 12px 12px 0 0;
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Efeitos de hover */
+.card:hover {
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+  transform: translateY(-5px);
+}
+
+.card img:hover {
+  transform: scale(1.1);
+}
+
+/* Efeito de clique */
+.card:active {
+  transform: scale(0.95);
 }
 
 .card h2 {
   font-size: 1rem;
-  margin-top: 5px;
+  margin: 10px 0;
+  color: #333;
 }
 
+/* Links sem sublinhado */
 a {
   text-decoration: none;
   color: inherit;
