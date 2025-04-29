@@ -6,6 +6,7 @@
 body {
   font-family: Arial, sans-serif;
 }
+/* Navbar */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -13,48 +14,90 @@ body {
   background: #333;
   padding: 15px;
   color: white;
+  position: relative;
 }
+
+/* Logo */
+.navbar img {
+  width: 50px;
+}
+
+/* Menu principal */
 .menu {
   display: flex;
   list-style: none;
+  padding-left: 0;
+  transition: all 0.3s ease; /* Animação suave ao abrir */
 }
+
 .menu li {
   margin: 0 15px;
 }
+
 .menu li a {
   color: white;
   text-decoration: none;
+  padding: 5px 10px; /* Adiciona espaçamento ao redor do texto */
+  font-size: 1.1rem;
+  transition: background 0.3s ease;
 }
+
+/* Efeito de hover nos links */
+.menu li a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+}
+
+/* Hamburger */
 .hamburger {
   display: none;
   flex-direction: column;
   cursor: pointer;
 }
+
 .hamburger div {
   width: 25px;
   height: 3px;
   background: white;
   margin: 5px;
+  border-radius: 5px;
 }
+
+/* Responsividade para telas pequenas */
 @media (max-width: 768px) {
   .menu {
-      display: none;
-      flex-direction: column;
-      width: 100%;
-      position: absolute;
-      top: 60px;
-      left: 0;
-      background: #333;
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background: #333;
+    padding: 20px 0;
   }
+
+  /* Menu visível quando ativo */
   .menu.active {
-      display: flex;
+    display: flex;
   }
+
+  /* Ajuste do hambúrguer */
   .hamburger {
-      display: flex;
+    display: flex;
+  }
+
+  /* Estilo de cada item no menu */
+  .menu li {
+    margin: 10px 0;
+    text-align: center;
+    width: 100%;
+  }
+
+  /* Ajustando o tamanho da fonte no celular */
+  .menu li a {
+    font-size: 1.2rem;
   }
 }
-
-
 
 
 /* Estilo geral */
