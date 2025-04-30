@@ -1,46 +1,10 @@
-body {
-  margin: 0;
-  padding: 20px;
-  font-family: Arial, sans-serif;
-  background: linear-gradient(270deg, rgba(248, 141, 42, 1) 0%, rgba(248, 141, 42, 1) 15%, rgba(255, 255, 255, 1) 14%);
-  text-align: center;
-}
-
-h1 {
-  margin: 15px;
-  font-size: 32px;
-  color: #222;
-}
-
-.descricao {
-  font-size: 18px;
-  line-height: 1.6;
-  max-width: 800px;
-  margin: 0 auto 30px;
-  padding: 0 10px;
-}
-
-.imagens {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-}
-
-.imagens img {
-  width: 100%;
-  max-width: 400px;
-  height: auto;
-  border-radius: 10px;
-}
-
-/* Botão animado original */
+/* Botão */
 .button {
   display: block;
   position: relative;
   width: 56px;
   height: 56px;
-  margin: 0 auto 20px;
+  margin: 0;
   overflow: hidden;
   outline: none;
   background-color: transparent;
@@ -58,14 +22,16 @@ h1 {
 
 .button:before {
   border: 4px solid #4f4c49;
-  transition: opacity 0.4s, transform 0.5s;
+  transition: opacity 0.4s cubic-bezier(0.77, 0, 0.175, 1) 80ms,
+    transform 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) 80ms;
 }
 
 .button:after {
   border: 4px solid #353c3e;
   transform: scale(1.3);
+  transition: opacity 0.4s cubic-bezier(0.165, 0.84, 0.44, 1),
+    transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   opacity: 0;
-  transition: opacity 0.4s, transform 0.5s;
 }
 
 .button:hover:before,
@@ -102,13 +68,71 @@ h1 {
   transform: translateX(-56px);
 }
 
-/* Responsivo extra para telas pequenas */
-@media (max-width: 600px) {
-  .descricao {
-    font-size: 16px;
-  }
+/* Body */
+body {
+  background: #F88D2A;
+  background: linear-gradient(270deg, rgba(248, 141, 42, 1) 0%, rgba(248, 141, 42, 1) 15%, rgba(255, 255, 255, 1) 14%);
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
 
+/* Título */
+h1 {
+  margin: 15px;
+  font-size: 2rem;
+  text-align: center;
+}
+
+/* Parágrafo */
+p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0 15px;
+  text-align: center;
+}
+
+/* Imagens */
+img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  margin: 15px 0;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+  p {
+    font-size: 0.9rem;
+  }
+  .button {
+    width: 48px;
+    height: 48px;
+  }
   .button-elem {
-    margin: 12px auto;
+    width: 18px;
+    height: 18px;
+    margin: 15px 16px 0 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.2rem;
+  }
+  p {
+    font-size: 0.85rem;
+  }
+  .button {
+    width: 40px;
+    height: 40px;
+  }
+  .button-elem {
+    width: 16px;
+    height: 16px;
+    margin: 12px 13px 0 13px;
   }
 }
