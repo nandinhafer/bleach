@@ -71,7 +71,7 @@
 /* Body */
 body {
   background: #F88D2A;
-  background: linear-gradient(270deg, rgba(248, 141, 42, 1) 0%, rgba(248, 141, 42, 1) 15%, rgba(255, 255, 255, 1) 14%);
+  background: linear-gradient(180deg, rgba(248, 141, 42, 1) 0%, rgba(248, 141, 42, 1) 5%, rgba(255, 255, 255, 1) 5%);
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
